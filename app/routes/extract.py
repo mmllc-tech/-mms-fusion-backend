@@ -30,7 +30,7 @@ def check_extraction_enabled():
         raise HTTPException(
             status_code=503,
             detail="AI extraction is temporarily paused. Please contact info@modernmindsolutionsllc.com"
-        )"
+        )
 
 
 class ExtractRequest(BaseModel):
@@ -76,7 +76,7 @@ DOCUMENTS:
 {documents}
 
 Return ONLY valid JSON with string values (never arrays or nested objects):
-{{"legislation":"...","enterprise":"..."}}"""
+{"legislation":"...","enterprise":"..."}"""
 
 
 PROMPT_2 = """You are a senior Oracle HCM Cloud Core HR consultant with 15+ years experience.
@@ -106,7 +106,7 @@ DOCUMENTS:
 {documents}
 
 Return ONLY valid JSON with string values (never arrays or nested objects):
-{{"absence_in_scope":"...","absence_types":"..."}}"""
+{"absence_in_scope":"...","absence_types":"..."}"""
 
 
 PROMPT_3 = """You are a senior Oracle HCM Cloud Core HR consultant with 15+ years experience.
@@ -121,7 +121,7 @@ FIELDS TO EXTRACT:
 DOCUMENTS:
 {documents}
 
-Return ONLY: {{"security":"...","dff":"...","integrations":"..."}}"""
+Return ONLY: {"security":"...","dff":"...","integrations":"..."}"""
 
 
 def parse_json_safe(raw: str) -> dict:
